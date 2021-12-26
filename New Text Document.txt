@@ -1,0 +1,5 @@
+1. biodata
+2. foto 
+3. sekolah
+4. social media
+5. hobi
