@@ -129,7 +129,7 @@ h2 {
   padding-bottom: 70px;
   /* margin-bottom: 90px;
   margin-top: 90px; */
-  background: #dbdbdb;
+  /* background: #dbdbdb; */
 }
 .persen .kotak {
   flex-direction: column;
@@ -162,8 +162,8 @@ h2 {
 
 div[role="progressbar"] {
   --size: 12rem;
-  --fg: #1b5027;
-  --bg: rgb(255, 255, 255);
+  --fg: #ef4136;
+  --bg: rgb(231, 244, 250);
   /* --pgPercentage: var(--value); */
   animation: growProgressBar 3s 1 forwards;
   width: var(--size);
@@ -173,9 +173,9 @@ div[role="progressbar"] {
   place-items: center;
   background: radial-gradient(
       /* atur besar bar */ closest-side,
-      #dbdbdb 70%,
+      #ffffff 70%,
       transparent 0 99.9%,
-      #dbdbdb 0
+      #ffffff 0
     ),
     conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
   font-family: Helvetica, Arial, sans-serif;
@@ -184,6 +184,61 @@ div[role="progressbar"] {
 }
 
 div[role="progressbar"]::before {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) "%";
+}
+div[role="progressbar2"] {
+  --size: 12rem;
+  --fg: #8ec63f;
+  --bg: rgb(231, 244, 250);
+  /* --pgPercentage: var(--value); */
+  animation: growProgressBar 3s 1 forwards;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 20%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(
+      /* atur besar bar */ closest-side,
+      #ffffff 70%,
+      transparent 0 99.9%,
+      #ffffff 0
+    ),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
+}
+
+div[role="progressbar2"]::before {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) "%";
+}
+
+div[role="progressbar3"] {
+  --size: 12rem;
+  --fg: #212121;
+  --bg: rgb(231, 244, 250);
+  /* --pgPercentage: var(--value); */
+  animation: growProgressBar 3s 1 forwards;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 20%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(
+      /* atur besar bar */ closest-side,
+      #ffffff 70%,
+      transparent 0 99.9%,
+      #ffffff 0
+    ),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
+}
+
+div[role="progressbar3"]::before {
   counter-reset: percentage var(--value);
   content: counter(percentage) "%";
 }
